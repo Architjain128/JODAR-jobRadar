@@ -39,6 +39,7 @@ router.post("/test",(req,res)=>{
     return res.json(response);
 });
 
+
 router.post('/signup',(req,res)=>{
     const {Firstname,Lastname,email,password,type,switched,company_name,contact_number,signup_time} = req.body
     let response={
