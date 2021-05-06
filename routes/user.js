@@ -6,15 +6,6 @@ const auth = require('../middleware/auth')
 const fs = require('fs');
 
 
-router.get("/all",(req,res)=>{
-    Signup.find((err,user)=>{
-        if(err)
-        throw err;
-        else{
-            res.status(201).json(user);
-        }
-    })
-});
 
 router.get("/user/:id",(req,res)=>{
     let userid = req.params.id
