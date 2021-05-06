@@ -19,8 +19,8 @@ import Heart from "./files/images/he.png";
 
 const Footer = () => (
   <div className="footer" style={{position:'fixed',backgroundColor:"rgb(176,203,232)",bottom:0,width:"100%",height:"auto"}}>
-    <p style={{position:'fixed',backgroundColor:"rgb(176,203,232)",bottom:0,left:0}}class="love">Made with <img src={Heart} alt="love" style={{height:"20px"}}/> by <a href="https://architjain128.github.io" style={{textDecoration: 'none',fontWeight:"bolder"}} >Archit Jain</a></p>
-    <p style={{position:'fixed',backgroundColor:"rgb(176,203,232)",bottom:0,right:0}}><a href="https://architjain128.github.io" style={{textDecoration: 'none',fontWeight:"bolder"}} >Vist my website</a></p>
+    <p style={{position:'fixed',backgroundColor:"rgb(176,203,232)",bottom:0,left:0,padding:'1px'}}class="love">Made with <img src={Heart} alt="love" style={{height:"20px"}}/> by <a href="https://architjain128.github.io" style={{textDecoration: 'none',fontWeight:"bolder"}} >Archit Jain</a></p>
+    <p style={{position:'fixed',backgroundColor:"rgb(176,203,232)",bottom:0,right:0,padding:'1px'}}><a href="https://architjain128.github.io" style={{textDecoration: 'none',fontWeight:"bolder"}} >Vist my website</a></p>
   </div>
 );
 
@@ -49,7 +49,8 @@ function App() {
           </Switch>
         </BrowserRouter>
       </div>
-      </div>
+      <Footer/>
+    </div>
   );
 }
 
