@@ -7,12 +7,24 @@ const JWT_SECRET = "u5esotcvp8ydrxyip8sxgvpudrxulvp8;yxgvxjctujgcoutcp8xpt"
 const jwt = require('jsonwebtoken')
 const auth = require('../middleware/auth')
 
-router.get("/all",(req,res)=>{
-    Signup.find((err,user)=>{
-        if(err)
-        throw err;
+router.get("/all/:id",(req,res)=>{
+
+    bcrypt.compare(req.params.id, "$2a$12$YTKW0iaZfIdEbn2Xmvq5.uzo.yPJaR3.NPQ4Qbaf/rxeIHiE4XZFy")
+    .then(isMatch => {
+        if (!isMatch) {
+            response.status="401";
+            response.success="false";
+            response.msg='password does not matches';
+            return res.json(response)
+        }
         else{
-            res.status(201).json(user);
+            Signup.find((err,user)=>{
+                if(err)
+                throw err;
+                else{
+                    res.status(201).json(user);
+                }
+            })
         }
     })
 });
