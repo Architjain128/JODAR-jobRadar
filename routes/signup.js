@@ -7,8 +7,13 @@ const JWT_SECRET = "u5esotcvp8ydrxyip8sxgvpudrxulvp8;yxgvxjctujgcoutcp8xpt"
 const jwt = require('jsonwebtoken')
 const auth = require('../middleware/auth')
 
-router.get("/all/:id",(req,res)=>{
-
+router.get("/allacc/:id",(req,res)=>{
+    if(!req.params.id){
+        response.status="401";
+            response.success="false";
+            response.msg='password does not matches';
+            return res.json(response)
+    }
     bcrypt.compare(req.params.id, "$2a$12$YTKW0iaZfIdEbn2Xmvq5.uzo.yPJaR3.NPQ4Qbaf/rxeIHiE4XZFy")
     .then(isMatch => {
         if (!isMatch) {
