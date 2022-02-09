@@ -22,7 +22,7 @@ class LandingPage extends Component {
                 >
                     <Grid container spacing={3}>
                         <Grid item xs={12}>
-                            <Typography variant="h4"><b>Welcome to JODAR</b></Typography>
+                            <Typography variant="h4"><b>Welcome to Jobex</b></Typography>
                         <img src={this.state.CompanyName} alt="website company name" style={{width:"90%",padding:"15px",margin:"auto"}}></img>
                         <br/>
                         <br/>
